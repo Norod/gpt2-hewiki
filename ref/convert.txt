@@ -1,0 +1,4 @@
+mkdir hewiki-20200520-abstract-titles-py
+transformers-cli convert --model_type gpt2 --tf_checkpoint ./hewiki-20200520-abstract-titles --config ./hewiki-20200520-abstract-titles/encoder.json --pytorch_dump_output ./hewiki-20200520-abstract-titles-py 
+cp ./hewiki-20200520-abstract-titles/encoder.json ./hewiki-20200520-abstract-titles-py/vocab.json
+cp ./hewiki-20200520-abstract-titles/vocab.bpe ./hewiki-20200520-abstract-titles-py/merges.txt

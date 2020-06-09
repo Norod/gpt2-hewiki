@@ -1,0 +1,64 @@
+<!doctype html>
+<html class="no-js" lang="he" dir="rtl">
+    <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153595643-3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-153595643-3');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>אִי-גָיוֹן</title>
+    <meta name="description" content="אִי-גָיוֹן - מחולל הגדרות נוֹנְסֵנְס. מחולל ג'יבריש שנראה כמו ערכים בויקיפדיה. מבוסס על מודל בינה מלאכותית ג׳יפיטי2 שאומן על תקצירים מויקיפדיה העברית">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/css/mdb.min.css" rel="stylesheet">
+</head>
+<body dir="rtl">
+    <div dir="rtl" class="container" style="display: inline-block; text-align: right">
+        <h2 dir="rtl" class="my-5 mx-lg-5">
+            <strong>אִי-גָיוֹן - מחולל הגדרות נוֹנְסֵנְס בסגנון ויקיפדיה</strong>
+        </h2>
+        <div dir="rtl" class="px-lg-5 pt-0">
+            <form dir="rtl" class="md-form" style="color: #757575;">
+                <div dir="rtl" class="d-flex justify-content-end"></div>
+                <textarea dir="rtl" name="text_in" class="form-control md-textarea" rows="1" id="textarea_in"
+                    placeholder=".רשמו פה משהו כמו תחילת הגדרה של מונח, שם מלא (מומלץ) וכדומה. אפשר גם להשאיר ריק ולהיות מופתעים"></textarea>
+                    <button dir="rtl" class="btn btn-amber" type="submit">צור נונסנס</button>
+                </div>
+                <textarea dir="rtl" name="text_out" class="form-control md-textarea" rows="5" id="textarea_out"
+                    placeholder="כאן יופיע הנוֹנְסֵנְס הנוגע למונח שהזנתם"></textarea>                
+            </form>
+        </div>
+        <hr>
+        <p dir="rtl" style="text-align:center;">מודל השפה אומן על ידי <a href="https://github.com/Norod">דורון אדלר</a></p>
+        <p dir="rtl" style="text-align:center;">הנה  <a href="leket.html">לקט הגיגים </a> שנפלטו במהלך אימון המודל </p>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/js/mdb.min.js"></script>
+    <script>
+        $('form').on('submit', function (e) {
+            texarea_out = $('textarea#textarea_out')
+            e.preventDefault();
+            texarea_out.val("נא להמתין")
+            $.post(window.location.href, $(this).serialize(), function (data) {
+                console.log('הידד, הג׳יבריש מוכן')
+                texarea_out.val("הידד, הג׳יבריש מוכן")
+                console.log(data)
+                texarea_out.val(data)
+            });
+        });
+    </script>
+</body>
+</html>
