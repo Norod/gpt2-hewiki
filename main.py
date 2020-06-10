@@ -5,7 +5,7 @@ import os
 from flask import Flask, request, send_file
 from model import extend
 
-maxNumOfTokensToExtend = 256
+maxNumOfTokensToExtend = 128
 
 app = Flask(__name__)
 

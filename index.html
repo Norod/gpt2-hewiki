@@ -28,11 +28,12 @@
         <div dir="rtl" class="px-lg-5 pt-0">
             <form dir="rtl" class="md-form" style="color: #757575;">
                 <div dir="rtl" class="d-flex justify-content-end"></div>
-                <textarea dir="rtl" name="text_in" class="form-control md-textarea" rows="1" id="textarea_in"
-                    placeholder=".רשמו פה משהו כמו תחילת הגדרה של מונח, שם מלא (מומלץ) וכדומה. אפשר גם להשאיר ריק ולהיות מופתעים"></textarea>
+                <textarea dir="rtl" name="text_in" class="form-control md-textarea" rows="1" id="textarea_in" autofocus
+                    placeholder=".רשמו פה משהו כמו תחילת הגדרה של מונח, שם מלא (מומלץ) וכדומה. אפשר גם להשאיר ריק ולהיות מופתעים" 
+                    onkeypress="process(event, this)"></textarea>
                     <button dir="rtl" class="btn btn-amber" type="submit">צור נונסנס</button>
                 </div>
-                <textarea dir="rtl" name="text_out" class="form-control md-textarea" rows="5" id="textarea_out"
+                <textarea readonly dir="rtl" name="text_out" class="form-control md-textarea" rows="5" id="textarea_out"
                     placeholder="כאן יופיע הנוֹנְסֵנְס הנוגע למונח שהזנתם"></textarea>                
             </form>
         </div>
@@ -48,15 +49,29 @@
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/js/mdb.min.js"></script>
     <script>
+        // Key Press Listener Attachment for #area.
+        function process(e) {
+            var code = (e.keyCode ? e.keyCode : e.which);
+            if (code == 13) { //Enter
+                // revent the default event.
+                event.preventDefault();
+                // Get the message value, stripping any newline characters.                                                 
+                $('form').submit();                   
+            }
+        }
+
         $('form').on('submit', function (e) {
             texarea_out = $('textarea#textarea_out')
+            texarea_out.select()
             e.preventDefault();
             texarea_out.val("נא להמתין")
-            $.post(window.location.href, $(this).serialize(), function (data) {
+            $.post(window.location.href, $(this).serialize(), function (data) {                
                 console.log('הידד, הג׳יבריש מוכן')
                 texarea_out.val("הידד, הג׳יבריש מוכן")
                 console.log(data)
                 texarea_out.val(data)
+                $('form').select()
+                $("#textarea_in").focus()
             });
         });
     </script>
