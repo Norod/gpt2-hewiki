@@ -14,17 +14,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta property="og:url"                content="https://e-gayon.com" />
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="אִי-גָיוֹן" />
+    <meta property="og:description"        content="בינה מלאכותית המחוללת הגדרות נוֹנְסֵנְס לערכים שאתם מספקים לה" />
+    <meta property="og:locale"			   content="he_IL" />
+    <meta property="og:image"              content="https://storage.googleapis.com/dadler_gpt2_data/e-gayon-icon.png" />
     <title>אִי-גָיוֹן</title>
     <meta name="description" content="אִי-גָיוֹן - מחולל הגדרות נוֹנְסֵנְס. מחולל ג'יבריש שנראה כמו ערכים בויקיפדיה. מבוסס על מודל בינה מלאכותית ג׳יפיטי2 שאומן על תקצירים מויקיפדיה העברית">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/css/mdb.min.css" rel="stylesheet">
 </head>
-<body dir="rtl">
+<body dir="rtl">    
     <div dir="rtl" class="container" style="display: inline-block; text-align: right">
         <h1 dir="rtl" class="my-2 mx-lg-2">אִי-גָיוֹן </h1>
         <h2  dir="rtl" class="my-2 mx-lg-2">מחולל הגדרות נוֹנְסֵנְס</h2>
-        <div dir="rtl" class="px-lg-5 pt-0">
+        <div dir="rtl" class="px-lg-2 pt-0">
             <form dir="rtl" class="md-form" style="color: #757575;">
                 <div dir="rtl" class="d-flex justify-content-end"></div>
                 <textarea dir="rtl" name="text_in" class="form-control md-textarea" rows="1" id="textarea_in" autofocus
@@ -33,12 +39,15 @@
                     <button dir="rtl" class="btn btn-outline-primary waves-effect" type="submit">צור נונסנס</button>
                 </div>
                 <textarea readonly dir="rtl" name="text_out" class="form-control md-textarea" rows="5" id="textarea_out"
-                    placeholder="כאן יופיע הנוֹנְסֵנְס הנוגע למונח שהזנתם"></textarea>                
+                    placeholder="כאן יופיע הנוֹנְסֵנְס הנוגע למונח שהזנתם"></textarea>
+                    <!-- <div dir="rtl" style="display: flex; justify-content: center" id="shareBtn" class="btn btn-success clearfix">יצא מצחיק? - שתפו!</div>     -->
             </form>
         </div>
         <hr>
-        <p dir="rtl" style="text-align:center;">מודל השפה אומן על ידי <a href="https://github.com/Norod">דורון אדלר</a></p>
-        <p dir="rtl" style="text-align:center;">הנה  <a href="leket.html">לקט הגיגים </a> שנפלטו במהלך אימון המודל </p>
+        <p dir="rtl" style="text-align:center;">מודל השפה אומן על ידי <a href="https://github.com/Norod">דורון אדלר</a><br/>
+        הנה  <a href="leket.html">לקט הגיגים </a> שנפלטו במהלך אימון המודל <br/>
+        <!-- <div style="display: flex; justify-content: center" class="fb-like" data-href="https://e-gayon.com" data-width="120" data-layout="standard" data-action="like" data-size="small" data-share="false"></div>-->
+        </p>
     </div>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript"
@@ -73,6 +82,20 @@
                 $("#textarea_in").focus()
             });
         });
+
+        /*
+        document.getElementById('shareBtn').onclick = function() {
+            texarea_out = $('textarea#textarea_out')
+            share_text = texarea_out.val
+            FB.ui({
+                display: 'popup',
+                method: 'share',
+                quote: share_text,
+                href: 'https://e-gayon.com',
+            }, function(response){});
+        }
+        */
+
     </script>
 </body>
 </html>
