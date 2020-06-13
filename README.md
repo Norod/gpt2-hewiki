@@ -15,12 +15,12 @@
 To get started on this project, follow these steps:
 
 * Clone: `git clone https://github.com/Norod/gpt2-hewiki.git` and `cd gpt2-hewiki`
-* _Optional_: checkout the latest _Release_ version, e.g. `git checkout v1.0.2`
+* _Optional_: checkout a _Release_ tag, e.g. `git checkout v1.0.2`
 * Install Dependencies: `pip install -r requirements.txt`
 * Run `download.sh` to download and extract the trained GPT-2 model
 * Run server: `python main.py`
 * Open Web Browser and visit: `http://localhost:8080/`
-* Type `שלום עולם` and press on `צור נונסנס`
+* Type `שלום עולם` and press on `צור נונסנס` (or hit Enter)
 * Enjoy!
 
 You may also want to build and run this project in docker container
