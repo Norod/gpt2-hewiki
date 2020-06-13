@@ -15,6 +15,7 @@
 To get started on this project, follow these steps:
 
 * Clone: `git clone https://github.com/Norod/gpt2-hewiki.git` and `cd gpt2-hewiki`
+* _Optional_: checkout the latest _Release_ version, e.g. `git checkout v1.0.2`
 * Install Dependencies: `pip install -r requirements.txt`
 * Run `download.sh` to download and extract the trained GPT-2 model
 * Run server: `python main.py`
