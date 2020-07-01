@@ -6,7 +6,7 @@ from torch.nn import functional as F
 from pytorch_transformers import GPT2Tokenizer, GPT2LMHeadModel
 torch.set_grad_enabled(False)
 
-MODEL_PATH = './HebrewNonsensePytorch124M'
+MODEL_PATH = './hewiki_distilGPT2'
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 tokenizer = GPT2Tokenizer.from_pretrained(MODEL_PATH)
@@ -44,6 +44,6 @@ def extend(text, max_size=20):
 
 
 if __name__ == "__main__":
-    test_text = 'בצל ירוק'
+    test_text = 'עליית המכונות'
     extended = extend(test_text, 120)
     print(extended)

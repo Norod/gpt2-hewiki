@@ -4,7 +4,7 @@
         </h2>
         
 
-<p dir="rtl" style="text-align:right;"> מחולל ג'יבריש שנראה כמו ערכים בויקיפדיה. מבוסס על מודל בינה מלאכותית ג׳יפיטי2 שאומן על תקצירים מויקיפדיה העברית.  <br>  <a href="https://e-gayon.com/">https://e-gayon.com </a></p>
+<p dir="rtl" style="text-align:right;"> מחולל ג'יבריש שנראה כמו ערכים בויקיפדיה. מבוסס על מודל הבינה המלאכותית דיסטיל-ג׳יפיטי2 שאומן על תקצירים מויקיפדיה העברית.  <br>  <a href="https://e-gayon.com/">https://e-gayon.com </a></p>
 
 <p dir="rtl" style="text-align: right;"> </p>
 
