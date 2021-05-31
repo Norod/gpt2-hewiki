@@ -23,7 +23,8 @@ def leket():
 
 @app.route('/checkpoint')
 def checkpoint():
-    return send_file('hewiki_distilGPT2/counter', mimetype='text/plain')
+    return ("20210531-1630")
+    #return send_file('hebrew-gpt_neo-tiny/counter', mimetype='text/plain')
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
