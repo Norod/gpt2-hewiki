@@ -5,7 +5,7 @@ import os
 from flask import Flask, request, send_file
 from model import extend
 
-maxNumOfTokensToExtend = 128
+maxNumOfTokensToExtend = 72
 
 app = Flask(__name__)
 
@@ -23,7 +23,7 @@ def leket():
 
 @app.route('/checkpoint')
 def checkpoint():
-    return ("20210531-1630")
+    return ("20210531-1838")
     #return send_file('hebrew-gpt_neo-tiny/counter', mimetype='text/plain')
 
 @app.route('/', methods=['GET', 'POST'])
@@ -35,7 +35,7 @@ def index():
     if len(data) > 0:
         title_data = str(data)
     else:
-        title_data = ""
+        title_data = "מחולל הנונסנס הוא"
     
     return extend(title_data,maxNumOfTokensToExtend)
 
