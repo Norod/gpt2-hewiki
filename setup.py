@@ -6,8 +6,8 @@ import torch
 import numpy as np
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-tokenizer = AutoTokenizer.from_pretrained("Norod78/hebrew-bad_wiki-gpt_neo-tiny")
-model = AutoModelForCausalLM.from_pretrained("Norod78/hebrew-bad_wiki-gpt_neo-tiny")
+tokenizer = AutoTokenizer.from_pretrained("./hebrew-bad_wiki-gpt_neo-tiny")
+model = AutoModelForCausalLM.from_pretrained("./hebrew-bad_wiki-gpt_neo-tiny")
 
 prompt_text = "מחולל הנונסנס הוא "
 stop_token = "<|endoftext|>"

@@ -7,8 +7,8 @@ import numpy as np
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-tokenizer = AutoTokenizer.from_pretrained("Norod78/hebrew-bad_wiki-gpt_neo-tiny")
-model = AutoModelForCausalLM.from_pretrained("Norod78/hebrew-bad_wiki-gpt_neo-tiny")
+tokenizer = AutoTokenizer.from_pretrained("./hebrew-bad_wiki-gpt_neo-tiny")
+model = AutoModelForCausalLM.from_pretrained("./hebrew-bad_wiki-gpt_neo-tiny")
 
 stop_token = "<|endoftext|>"
 new_lines = "\n"
