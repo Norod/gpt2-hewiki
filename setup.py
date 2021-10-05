@@ -5,9 +5,17 @@ import argparse
 import torch
 import numpy as np
 from transformers import AutoTokenizer, AutoModelForCausalLM
+import os
 
 tokenizer = AutoTokenizer.from_pretrained("Norod78/hebrew-bad_wiki-gpt_neo-tiny")
 model = AutoModelForCausalLM.from_pretrained("Norod78/hebrew-bad_wiki-gpt_neo-tiny")
+
+pre_model_path = './hebrew-bad_wiki-gpt_neo-tiny'
+os.mkdir(pre_model_path)
+
+model.save_pretrained(pre_model_path, save_config=True)
+tokenizer.save_pretrained(pre_model_path)
+tokenizer.save_vocabulary(pre_model_path)
 
 prompt_text = "מחולל הנונסנס הוא "
 stop_token = "<|endoftext|>"
